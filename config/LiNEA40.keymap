@@ -127,7 +127,7 @@
         default_layer {
             bindings = <
 &mt ESCAPE Q   &kp L         &kp U               &kp COMMA  &kp DOT                                         &kp F             &kp W  &kp R                &kp Y          &kp P
-&kp C          &kp I         &kp A               &kp O      &kp MINUS                                       &kp K             &kp T  &kp N                &kp S          &kp H
+&kp E          &kp I         &kp A               &kp O      &kp MINUS                                       &kp K             &kp T  &kp N                &kp S          &kp H
 &kp Z          &kp X         &kp C               &kp V      &kp BACKSPACE                                   &kp G             &kp D  &kp M                &kp J          &kp B
 &mt LCTRL TAB  &kp LEFT_WIN  &mt LEFT_ALT GRAVE  &kp INS    &lt 3 INT_MUHENKAN  &lt 2 SPACE    &lt 2 ENTER  &lt 3 INT_HENKAN         &lt 6 RIGHT_BRACKET  &kp BACKSLASH  &mt RIGHT_SHIFT BACKSPACE
             >;
