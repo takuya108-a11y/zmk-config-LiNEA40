@@ -146,7 +146,7 @@
         Kakkotoji: Kakkotoji {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp INT_MUHENKAN &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT>;
+            bindings = <&kp INT_MUHENKAN &kp JP_LPAREN &kp RIGHT_PARENTHESIS &kp LEFT>;
             label = "KAKKOTOJI";
         };
     };
