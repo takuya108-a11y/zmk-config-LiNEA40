@@ -185,7 +185,7 @@
 
         MARK {
             bindings = <
-&kp EXCLAMATION  &sk LS(SINGLE_QUOTE)  &kp HASH   &kp DOLLAR  &kp PERCENT                      &kp CARET      &kp APOS       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSPACE
+&kp EXCLAMATION  &sk LS(SINGLE_QUOTE)  &kp HASH   &kp DOLLAR  &kp PERCENT                      &kp CARET      &kp APOS       &kp JP_LPAREN         &kp JP_RPAREN          &kp BACKSPACE
 &sk N6           &sk N2                &kp SLASH  &kp MINUS   &kp BACKSLASH                    &kp SEMICOLON  &sk SEMICOLON  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp INT_YEN
 &sk GRAVE        &kp GRAVE             &sk SLASH  &kp EQUAL   &sk LS(MINUS)                    &sk EQUAL      &sk N8         &sk LEFT_BRACKET      &sk RIGHT_BRACKET      &kp N0
 &trans           &trans                &trans     &trans      &trans         &trans    &trans  &trans                        &kp ASTERISK          &kp LEFT_PARENTHESIS   &kp LS(QUESTION)
