@@ -167,10 +167,10 @@
 
         default_layer {
             bindings = <
-&mt ESCAPE Q   &kp L         &kp U               &kp COMMA     &kp DOT                                         &kp F             &kp W  &kp R            &kp Y          &kp P
-&kp E          &kp I         &kp A               &kp O         &kp MINUS                                       &kp K             &kp T  &kp N            &kp S          &kp H
-&kp Z          &kp X         &kp C               &kp V         &kp BACKSPACE                                   &kp G             &kp D  &kp M            &kp J          &b_shift RIGHT_SHIFT B
-&mt LCTRL TAB  &kp LEFT_WIN  &mt LEFT_ALT GRAVE  &kp LEFT_ALT  &lt 3 INT_MUHENKAN  &lt 2 SPACE    &lt 2 ENTER  &lt 3 INT_HENKAN         &lt 6 RS(MINUS)  &kp BACKSLASH  &mt RIGHT_SHIFT DEL
+&mt ESCAPE Q   &kp L         &kp U               &kp COMMA     &kp DOT                                         &kp F             &kp W  &kp R                &kp Y          &kp P
+&kp E          &kp I         &kp A               &kp O         &kp MINUS                                       &kp K             &kp T  &kp N                &kp S          &kp H
+&kp Z          &kp X         &kp C               &kp V         &kp BACKSPACE                                   &kp G             &kp D  &kp M                &kp J          &b_shift RIGHT_SHIFT B
+&mt LCTRL TAB  &kp LEFT_WIN  &mt LEFT_ALT GRAVE  &kp LEFT_ALT  &lt 3 INT_MUHENKAN  &lt 2 SPACE    &lt 2 ENTER  &lt 3 INT_HENKAN         &lt 6 JP_UNDERSCORE  &kp BACKSLASH  &mt RIGHT_SHIFT DEL
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
@@ -187,10 +187,10 @@
 
         CURSOR {
             bindings = <
-&kp F4     &kp F2          &kp UP_ARROW  &kp LC(NUMBER_1)  &kp LA(F11)                      &kp SLASH  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS
-&kp RC(S)  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW   &trans                           &kp ASTRK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS
-&kp RC(Z)  &kp LC(X)       &kp LC(C)     &kp LC(V)         &kp LS(LC(V))                    &kp EQUAL  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0
-&trans     &trans          &trans        &trans            &trans         &trans    &trans  &trans                   &kp UNDER     &kp ENTER     &kp QUESTION
+&kp F4     &kp F2          &kp UP_ARROW  &kp LC(NUMBER_1)  &kp LA(F11)                      &kp SLASH  &kp NUMBER_7  &kp NUMBER_8          &kp NUMBER_9  &kp MINUS
+&kp RC(S)  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW   &trans                           &kp ASTRK  &kp NUMBER_4  &kp NUMBER_5          &kp NUMBER_6  &kp PLUS
+&kp RC(Z)  &kp LC(X)       &kp LC(C)     &kp LC(V)         &kp LS(LC(V))                    &kp EQUAL  &kp NUMBER_1  &kp NUMBER_2          &kp NUMBER_3  &kp NUMBER_0
+&trans     &trans          &trans        &trans            &trans         &trans    &trans  &trans                   &kp JP_UNDERSCORE     &kp ENTER     &kp QUESTION
             >;
         };
 
