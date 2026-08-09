@@ -16,6 +16,7 @@
 #define WIRELESS 6
 
 // OS設定を日本語キーボードのまま使用するための変換定義
+
 #define JP_DQUOTE       AT                // "
 #define JP_AMPERSAND    CARET             // &
 #define JP_QUOTE        AMPERSAND         // '
@@ -82,7 +83,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -108,7 +109,7 @@
 
         backspace {
             bindings = <&kp BACKSPACE>;
-            key-positions = <16 8>;
+            key-positions = <16 18>;
         };
     };
 
@@ -185,10 +186,10 @@
 
         MARK {
             bindings = <
-&kp EXCLAMATION  &sk LS(SINGLE_QUOTE)  &kp HASH   &kp DOLLAR  &kp PERCENT                      &kp CARET      &kp APOS       &kp JP_LPAREN         &kp JP_RPAREN          &kp BACKSPACE
-&sk N6           &sk N2                &kp SLASH  &kp MINUS   &kp BACKSLASH                    &kp SEMICOLON  &sk SEMICOLON  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp INT_YEN
-&sk GRAVE        &kp GRAVE             &sk SLASH  &kp EQUAL   &sk LS(MINUS)                    &sk EQUAL      &sk N8         &sk LEFT_BRACKET      &sk RIGHT_BRACKET      &kp N0
-&trans           &trans                &trans     &trans      &trans         &trans    &trans  &trans                        &kp ASTERISK          &kp LEFT_PARENTHESIS   &kp LS(QUESTION)
+&kp EXCLAMATION  &sk LS(SINGLE_QUOTE)  &kp HASH   &kp DOLLAR  &kp PERCENT                      &kp CARET      &kp APOS       &kp JP_LPAREN     &kp JP_RPAREN         &kp BACKSPACE
+&sk N6           &sk N2                &kp SLASH  &kp MINUS   &kp BACKSLASH                    &kp SEMICOLON  &sk SEMICOLON  &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp INT_YEN
+&sk GRAVE        &kp GRAVE             &sk SLASH  &kp EQUAL   &sk LS(MINUS)                    &sk EQUAL      &sk N8         &sk LEFT_BRACKET  &sk RIGHT_BRACKET     &kp N0
+&trans           &trans                &trans     &trans      &trans         &trans    &trans  &trans                        &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp LS(QUESTION)
             >;
 
             sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;
