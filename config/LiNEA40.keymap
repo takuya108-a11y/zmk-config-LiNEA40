@@ -83,7 +83,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -161,7 +161,7 @@
             label = "KAKKOTOJI";
         };
 
-        pass: pass {
+        kaijo: pass {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp LS(N) &kp E &kp W &kp W &kp E &kp S &kp T &kp N1 &kp N0 &kp N0 &kp N8 &kp ENTER>;
@@ -197,7 +197,7 @@
 &kp F4     &kp F2          &kp UP_ARROW  &kp LC(NUMBER_1)  &kp LA(F11)                      &kp SLASH        &kp KP_NUMBER_7  &kp KP_NUMBER_8    &kp KP_NUMBER_9  &kp MINUS
 &kp RC(S)  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW   &trans                           &kp JP_ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5    &kp KP_NUMBER_6  &kp JP_PLUS
 &kp RC(Z)  &kp LC(X)       &kp LC(C)     &kp LC(V)         &kp LS(LC(V))                    &kp JP_EQUAL     &kp KP_NUMBER_1  &kp KP_NUMBER_2    &kp KP_NUMBER_3  &kp KP_NUMBER_0
-&trans     &trans          &trans        &trans            &trans         &trans    &trans  &trans                            &kp JP_UNDERSCORE  &pass            &kp QUESTION
+&trans     &trans          &trans        &trans            &trans         &trans    &trans  &trans                            &kp JP_UNDERSCORE  &kaijo           &kp QUESTION
             >;
         };
 
