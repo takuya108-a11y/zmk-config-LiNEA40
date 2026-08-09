@@ -196,7 +196,7 @@
 
         MARK {
             bindings = <
-&kp EXCLAMATION   &kp JP_DQUOTE         &kp HASH       &kp DOLLAR     &kp PERCENT                         &kp CARET      &kp JP_AMPERSAND  &kp JP_LPAREN     &kp JP_RPAREN         &kp BACKSPACE
+&kp EXCLAMATION   &kp JP_DQUOTE         &kp HASH       &kp DOLLAR     &kp PERCENT                         &kp CARET      &kp JP_QUOTE      &kp JP_LPAREN     &kp JP_RPAREN         &kp BACKSPACE
 &kp JP_CARET      &kp JP_AT             &kp SLASH      &kp MINUS      &kp JP_YEN                          &kp SEMICOLON  &kp JP_COLON      &kp JP_LBRACKET   &kp JP_RBRACKET       &kp INT_YEN
 &kp JP_TILDE      &kp JP_BACKQUOTE      &kp LS(SLASH)  &kp JP_EQUAL   &kp JP_UNDERSCORE                   &kp JP_PLUS    &kp JP_ASTERISK   &kp JP_LBRACE     &kp JP_RBRACE         &kp N0
 &trans            &trans                &trans         &trans         &trans            &trans    &trans  &trans                           &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp LS(QUESTION)
