@@ -199,6 +199,8 @@
 &kp RC(Z)  &kp LC(X)       &kp LC(C)     &kp LC(V)         &kp LS(LC(V))                    &kp JP_EQUAL     &kp KP_NUMBER_1  &kp KP_NUMBER_2    &kp KP_NUMBER_3  &kp KP_NUMBER_0
 &trans     &trans          &trans        &trans            &trans         &trans    &trans  &trans                            &kp JP_UNDERSCORE  &kaijo           &kp QUESTION
             >;
+
+            sensor-bindings = <&kp DEL &kp BACKSPACE>;
         };
 
         MARK {
