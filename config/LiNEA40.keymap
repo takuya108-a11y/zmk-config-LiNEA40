@@ -83,7 +83,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -199,6 +199,8 @@
 &kp RC(Z)  &kp LC(X)       &kp LC(C)     &kp LC(V)         &kp LS(LC(V))                    &kp JP_EQUAL     &kp KP_NUMBER_1  &kp KP_NUMBER_2    &kp KP_NUMBER_3  &kp KP_NUMBER_0
 &trans     &trans          &trans        &trans            &trans         &trans    &trans  &trans                            &kp JP_UNDERSCORE  &kaijo           &kp QUESTION
             >;
+
+            sensor-bindings = <&inc_dec_kp DELETE BACKSPACE>;
         };
 
         MARK {
@@ -209,7 +211,7 @@
 &trans           &trans            &trans         &trans        &trans             &trans    &trans  &trans                          &kp ASTERISK     &kp LEFT_PARENTHESIS  &kp LS(QUESTION)
             >;
 
-            sensor-bindings = <&re_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;
         };
 
         FUNCTION {
