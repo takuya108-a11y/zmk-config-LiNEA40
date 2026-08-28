@@ -195,7 +195,7 @@
 &trans  &trans  &trans  &trans  &trans                      &trans    &trans    &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans                      &mkp MB4  &mkp MB1  &mkp MB2  &mkp MB3  &trans
 &trans  &trans  &trans  &trans  &trans                      &trans    &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &AmKaijo  &trans    &trans  &AmKaijo            &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &layer 0  &trans    &trans  &layer 0            &trans    &trans    &trans
             >;
         };
 
