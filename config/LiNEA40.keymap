@@ -68,12 +68,6 @@
             codes = <INPUT_REL_WHEEL>;
             track-remainders;
         };
-        // ★ Auto Mouse Layer 用：左クリックだけ維持
-        zip_temp_layer: zip_temp_layer {
-            compatible = "zmk,input-processor-temp-layer";
-            #input-processor-cells = <2>;
-            excluded-positions = <16>;  // 左クリックだけ AML 維持
-        };
     };
 };
 
@@ -91,11 +85,6 @@
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
-    };
-    // ★ Auto Mouse Layer：左クリックだけ維持、他キーで解除
-    auto_mouse_layer {
-        layers = <MOUSE>;  // MOUSE = 1
-        input-processors = <&zip_temp_layer MOUSE 10000>; // 10秒維持
     };
 };
 
