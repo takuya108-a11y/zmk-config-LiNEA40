@@ -1,11 +1,4 @@
 #include "LiNEA40.dtsi"
-
-/ {
-    input_processors: input_processors {
-        compatible = "zmk,input-processors";
-    };
-};
-
 &default_transform {
     col-offset = <6>;
 };
@@ -19,6 +12,15 @@
         , <&gpio0 10 GPIO_ACTIVE_HIGH>  //col4-NFC2
         ;
 };
+
+/ {
+    trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+
+    };
+};
+
 
 &pinctrl {
     spi0_default: spi0_default {
@@ -55,9 +57,14 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&xiao_d 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; //MOT-D6
-        //automouse-layer = <1>;
+        automouse-layer = <1>;
         snipe-layers = <2>;
         scroll-layers = <5>;
         //scroll-layers = <4 5 6>;
     };
+};
+
+&trackball_listener {
+    status = "okay";
+    device = <&trackball>;
 };
