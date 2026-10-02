@@ -1,11 +1,5 @@
 #include "LiNEA40.dtsi"
 
-/ {
-    input_processors: input_processors {
-        compatible = "zmk,input-processors";
-    };
-};
-
 &kscan0 {
     col-gpios
         = <&xiao_d 10 GPIO_ACTIVE_HIGH> //col0-D10
