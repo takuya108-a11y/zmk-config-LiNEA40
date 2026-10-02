@@ -14,3 +14,8 @@
 &left_encoder {
    status = "okay";
 };
+/ {
+    input_processors {
+        compatible = "zmk,input-processors";
+    };
+};
