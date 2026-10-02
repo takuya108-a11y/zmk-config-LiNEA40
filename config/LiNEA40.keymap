@@ -86,6 +86,11 @@
             //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
+    // ★ AutoMouseLayer の追加（正しい場所）
+    auto_mouse_layer {
+        layers = <MOUSE>;
+        input-processors = <&zip_temp_layer MOUSE 10000>;
+    };
 };
 
 / {
