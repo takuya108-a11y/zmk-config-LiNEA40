@@ -1,4 +1,11 @@
 #include "LiNEA40.dtsi"
+
+/ {
+    input_processors: input_processors {
+        compatible = "zmk,input-processors";
+    };
+};
+
 &default_transform {
     col-offset = <6>;
 };
