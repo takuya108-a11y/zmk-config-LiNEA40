@@ -13,15 +13,6 @@
         ;
 };
 
-// {
-//    trackball_listener {
-//        compatible = "zmk,input-listener";
-//        device = <&trackball>;
-//
-//    };
-//h};
-
-
 &pinctrl {
     spi0_default: spi0_default {
         group1 {
