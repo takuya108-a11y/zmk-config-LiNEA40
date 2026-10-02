@@ -59,19 +59,15 @@
     acceleration-exponent = <0>;
 };
 
-&input_processors {
-    zip_wheel_scaler: zip_wheel_scaler {
-        compatible = "zmk,input-processor-scaler";
-        #input-processor-cells = <2>;
-        type = <INPUT_EV_REL>;
-        codes = <INPUT_REL_WHEEL>;
-        track-remainders;
-    };
-
-    zip_temp_layer: zip_temp_layer {
-        compatible = "zmk,input-processor-temp-layer";
-        #input-processor-cells = <2>;
-        excluded-positions = <16>;// 左クリックだけ維持したいなら
+/ {
+    input_processors {
+        zip_wheel_scaler: zip_wheel_scaler {
+            compatible = "zmk,input-processor-scaler";
+            #input-processor-cells = <2>;
+            type = <INPUT_EV_REL>;
+            codes = <INPUT_REL_WHEEL>;
+            track-remainders;
+        };
     };
 };
 
@@ -89,11 +85,6 @@
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
-    };
-    // ★ AutoMouseLayer の追加（正しい場所）
-    auto_mouse_layer {
-        layers = <MOUSE>;
-        input-processors = <&zip_temp_layer MOUSE 10000>;
     };
 };
 
@@ -292,11 +283,5 @@
 
             sensor-bindings = <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
         };
-    };
-};
-
-/ {
-    input_processors: input_processors {
-        compatible = "zmk,input-processors";
     };
 };
