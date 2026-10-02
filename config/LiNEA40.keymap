@@ -68,6 +68,12 @@
             codes = <INPUT_REL_WHEEL>;
             track-remainders;
         };
+        // ★ ここに追加
+        zip_temp_layer: zip_temp_layer {
+            compatible = "zmk,input-processor-temp-layer";
+            #input-processor-cells = <2>;
+            excluded-positions = <16>; // 左クリックだけ維持したいなら
+        };
     };
 };
 
