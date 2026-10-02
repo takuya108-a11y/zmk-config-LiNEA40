@@ -294,3 +294,9 @@
         };
     };
 };
+
+/ {
+    input_processors: input_processors {
+        compatible = "zmk,input-processors";
+    };
+};
