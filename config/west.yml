@@ -8,6 +8,9 @@ manifest:
       url-base: https://github.com/kay-yokoyama
     - name: caksoylar
       url-base: https://github.com/caksoylar
+    # ─── 追記 ───
+    - name: eswai
+      url-base: https://github.com
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -19,5 +22,9 @@ manifest:
     - name: zmk-rgbled-widget
       remote: caksoylar
       revision: v0.3-branch
+    # ─── 追記 ───
+    - name: zmk-naginata
+      remote: eswai
+      revision: main
   self:
     path: config
