@@ -93,18 +93,6 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_ng_on {
-            timeout-ms = <300>;
-            key-positions = <15 16>; // H, Jのキー位置に書き換えてください
-            bindings = <&ng_on>;
-            layers = <0>; // デフォルトレイヤーが0の前提
-        };
-        ng_off: ng_off {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp LANGUAGE_2 &kp INTERNATIONAL_5 &to 0>;
-        };
-
         UpFolder {
             bindings = <&UpFolder>;
             key-positions = <11 12>;
