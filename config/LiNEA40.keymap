@@ -1,5 +1,6 @@
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 150
 
+#include <behaviors/naginata.dtsi># ここを追加
 #include <dt-bindings/zmk/input_transform.h>
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
@@ -279,10 +280,10 @@
 
         naginata {
             bindings = <
-&kp Q      &kp W   &kp E   &kp R   &kp T                              &kp Y      &kp U  &kp I      &kp O     &kp P
-&kp A      &kp S   &kp D   &kp F   &kp G                              &kp H      &kp J  &kp K      &kp L     &kp SEMI
-&kp Z      &kp X   &kp C   &kp V   &kp B                              &kp N      &kp M  &kp COMMA  &kp DOT   &kp QUESTION
-&kp LSHFT  &trans  &trans  &trans  &kp ENTER  &kp SPACE    &kp SPACE  &kp ENTER         &trans     &kp BSPC  &kp RSHFT
+&ng Q      &ng W      &ng E      &ng R      &ng T                               &ng Y      &ng U      &ng I      &ng O      &ng P
+&ng A      &ng S      &ng D      &ng F      &ng G                               &ng H      &ng J      &ng K      &ng L      &ng SEMI
+&ng Z      &ng X      &ng C      &ng V      &ng B                               &ng N      &ng M      &ng COMMA  &ng DOT    &ng SLASH
+&trans     &trans     &trans     &trans     &kp LSHIFT    &mo LOWER  &ng SPACE  &ng ENTER  &mo RAISE  &kp RCTRL  
             >;
         };
 
