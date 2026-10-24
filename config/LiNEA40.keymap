@@ -72,7 +72,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -80,6 +80,7 @@
 /* ==========================================================================
    全てのカスタム定義（macros, behaviors, combos, keymap）を1つのルートノードにまとめます
    ========================================================================== */
+
 / {
     input_processors {
         zip_wheel_scaler: zip_wheel_scaler {
@@ -92,19 +93,16 @@
     };
 
     macros {
-         ng_on: ng_on {
+        ng_on: ng_on {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp LANGUAGE_1 &kp INTERNATIONAL_4 &to 2>
-                ;
+            bindings = <&macro_tap>, <&kp LANGUAGE_1 &kp INTERNATIONAL_4 &to 2>;
         };
+
         ng_off: ng_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp LANGUAGE_2 &kp INTERNATIONAL_5 &to 0>
-                ;
+            bindings = <&macro_tap>, <&kp LANGUAGE_2 &kp INTERNATIONAL_5 &to 0>;
         };
 
         xn: xn {
@@ -265,9 +263,14 @@
             key-positions = <5 6>;
         };
 
+        nagitog {
+            bindings = <&tog 2>;
+            key-positions = <9 0>;
+        };
+
         //naginata {
-          //  bindings = <&tog 2>;
-          //  key-positions = <0 9>;
+        //  bindings = <&tog 2>;
+        //  key-positions = <0 9>;
         //};
     };
 
@@ -296,10 +299,10 @@
 
         naginata {
             bindings = <
-&ng Q      &ng W           &ng E   &ng R   &ng T                              &ng Y      &ng U    &ng I      &ng O     &ng P
-&ng A      &ng S           &ng D   &ng F   &ng G                              &ng H      &ng J    &ng K      &ng L     &ng SEMI
-&ng Z      &ng X           &ng C   &ng V   &ng B                              &ng N      &ng M    &ng COMMA  &ng DOT   &ng SLASH
-&kp LSHFT  &kp INT_HENKAN  &trans  &trans  &ng ENTER  &ng SPACE    &ng SPACE  &ng ENTER           &trans     &kp BSPC  &kp RSHFT
+&ng Q      &ng W           &ng E   &ng R   &ng T                              &ng Y      &ng U  &ng I      &ng O     &ng P
+&ng A      &ng S           &ng D   &ng F   &ng G                              &ng H      &ng J  &ng K      &ng L     &ng SEMI
+&ng Z      &ng X           &ng C   &ng V   &ng B                              &ng N      &ng M  &ng COMMA  &ng DOT   &ng SLASH
+&kp LSHFT  &kp INT_HENKAN  &trans  &trans  &ng ENTER  &ng SPACE    &ng SPACE  &ng ENTER         &trans     &kp BSPC  &kp RSHFT
             >;
         };
 
@@ -357,4 +360,3 @@
         };
     };
 }; // ルートノードの閉じ
-
