@@ -1,0 +1,21 @@
+# West workspace metadata
+.west/
+
+# West-managed source checkouts in this workspace
+zmk/
+zmk-naginata/
+zmk-pmw3610-driver/
+zmk-rgbled-widget/
+zephyr/
+modules/
+
+# Build output
+build/
+
+# Generated firmware artifacts
+firmware/*.uf2
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+
