@@ -89,117 +89,6 @@
     };
 };
 
-/ {
-    combos {
-        compatible = "zmk,combos";
-
-        UpFolder {
-            bindings = <&UpFolder>;
-            key-positions = <11 12>;
-        };
-
-        kakkotoji {
-            bindings = <&Kakkotoji>;
-            key-positions = <7 8>;
-        };
-
-        xn {
-            bindings = <&xn>;
-            key-positions = <18 17>;
-        };
-
-        leftcl {
-            bindings = <&mkp MB1>;
-            key-positions = <16 17>;
-        };
-
-        kesu {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <8 9>;
-        };
-
-        nigeru {
-            bindings = <&kp ESCAPE>;
-            key-positions = <0 1>;
-        };
-
-        tabu {
-            bindings = <&kp TAB>;
-            key-positions = <12 13>;
-        };
-
-        migiclickdesu {
-            bindings = <&mkp MB2>;
-            key-positions = <16 18>;
-        };
-
-        mannata {
-            bindings = <&mkp MB3>;
-            key-positions = <16 18 17>;
-        };
-
-        modoru {
-            bindings = <&mkp MB4>;
-            key-positions = <5 6>;
-        };
-        combo_ng_on {
-            timeout-ms = <300>;
-            key-positions = <0 9>; // H, Jのキー位置に書き換えてください
-            bindings = <&ng_on>;
-            layers = <0>; // デフォルトレイヤーが0の前提
-        };
-        combo_ng_off {
-            timeout-ms = <300>;
-            key-positions = <10 19>; // F, Gのキー位置に書き換えてください
-            bindings = <&ng_off>;
-            layers = <0 1>; // デフォルトレイヤーが0、薙刀式レイヤーが1の前提
-        };
-    };
-
-    behaviors {
-        re_kp: sensor_rotate_kp {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            #sensor-binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-        };
-
-        mouse_scrl: mouse_wheel_scrl {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            #sensor-binding-cells = <2>;
-            bindings = <&msc>, <&msc>;
-
-            tap-ms = <20>;
-        };
-
-        b_shift: b_shift {
-            compatible = "zmk,behavior-hold-tap";
-            label = "B_SHIFT";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            flavor = "tap-preferred";
-        };
-
-        tog_off: toggle_layer_off {
-            compatible = "zmk,behavior-toggle-layer";
-            #binding-cells = <1>;
-            display-name = "Toggle Layer Off";
-            toggle-mode = "off";
-        };
-
-        mt_exit_AML_on_tap: mt_exit_AML_on_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MT_exit_AML_ON_TAP";
-            bindings = <&kp>, <&kp_exit_AML>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "balanced";
-            quick-tap-ms = <200>;
-        };
-    };
-
     macros {
         //ここから追加
          ng_on: ng_on {
@@ -277,6 +166,120 @@
             label = "KP_exit_AML";
         };
     };
+
+    behaviors {
+        re_kp: sensor_rotate_kp {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            #sensor-binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+        };
+
+        mouse_scrl: mouse_wheel_scrl {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            #sensor-binding-cells = <2>;
+            bindings = <&msc>, <&msc>;
+
+            tap-ms = <20>;
+        };
+
+        b_shift: b_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "B_SHIFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            flavor = "tap-preferred";
+        };
+
+        tog_off: toggle_layer_off {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer Off";
+            toggle-mode = "off";
+        };
+
+        mt_exit_AML_on_tap: mt_exit_AML_on_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_exit_AML_ON_TAP";
+            bindings = <&kp>, <&kp_exit_AML>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+            quick-tap-ms = <200>;
+        };
+    };
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+
+        UpFolder {
+            bindings = <&UpFolder>;
+            key-positions = <11 12>;
+        };
+
+        kakkotoji {
+            bindings = <&Kakkotoji>;
+            key-positions = <7 8>;
+        };
+
+        xn {
+            bindings = <&xn>;
+            key-positions = <18 17>;
+        };
+
+        leftcl {
+            bindings = <&mkp MB1>;
+            key-positions = <16 17>;
+        };
+
+        kesu {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <8 9>;
+        };
+
+        nigeru {
+            bindings = <&kp ESCAPE>;
+            key-positions = <0 1>;
+        };
+
+        tabu {
+            bindings = <&kp TAB>;
+            key-positions = <12 13>;
+        };
+
+        migiclickdesu {
+            bindings = <&mkp MB2>;
+            key-positions = <16 18>;
+        };
+
+        mannata {
+            bindings = <&mkp MB3>;
+            key-positions = <16 18 17>;
+        };
+
+        modoru {
+            bindings = <&mkp MB4>;
+            key-positions = <5 6>;
+        };
+        combo_ng_on {
+            timeout-ms = <300>;
+            key-positions = <0 9>; // H, Jのキー位置に書き換えてください
+            bindings = <&ng_on>;
+            layers = <0>; // デフォルトレイヤーが0の前提
+        };
+        combo_ng_off {
+            timeout-ms = <300>;
+            key-positions = <10 19>; // F, Gのキー位置に書き換えてください
+            bindings = <&ng_off>;
+            layers = <0 1>; // デフォルトレイヤーが0、薙刀式レイヤーが1の前提
+        };
+    };
+
+
+
 
     keymap {
         compatible = "zmk,keymap";
