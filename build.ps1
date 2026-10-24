@@ -50,6 +50,22 @@ if ($LASTEXITCODE -ne 0) {
 
 New-Item -ItemType Directory -Force -Path $FirmwareDir, $BuildRoot | Out-Null
 $BashLines = @(
+    'if [ ! -f .west/config ]; then'
+    '  echo "Initializing West workspace..."'
+    '  west init -l config'
+    '  setup_status=$?'
+    '  if [ "$setup_status" -ne 0 ]; then echo "__WEST_INIT_FAILED__:$setup_status"; exit "$setup_status"; fi'
+    'fi'
+    'needs_update=0'
+    'for required in zmk/app zephyr/share/zephyr-package/cmake/zephyr_export.cmake modules zmk-naginata zmk-pmw3610-driver zmk-rgbled-widget; do'
+    '  if [ ! -e "$required" ]; then needs_update=1; fi'
+    'done'
+    'if [ "$needs_update" -ne 0 ]; then'
+    '  echo "Missing West projects detected; fetching dependencies (network required on first setup)..."'
+    '  west update --fetch-opt=--filter=tree:0'
+    '  setup_status=$?'
+    '  if [ "$setup_status" -ne 0 ]; then echo "__WEST_UPDATE_FAILED__:$setup_status"; exit "$setup_status"; fi'
+    'fi'
     'cmake -P zephyr/share/zephyr-package/cmake/zephyr_export.cmake'
     'export_status=$?'
     'if [ "$export_status" -ne 0 ]; then echo "__ZEPHYR_EXPORT_FAILED__:$export_status"; exit "$export_status"; fi'
@@ -173,5 +189,6 @@ Write-Host '=== Build results ===' -ForegroundColor Cyan
 $Results | Format-Table -AutoSize
 Write-Host "Total time: $(Format-Elapsed $TotalTimer.Elapsed.TotalSeconds)"
 Write-Host "Output folder: $FirmwareDir"
-Read-Host "続行するには Enter キーを押してください..."
 if ($AnyFailed) { exit 1 } else { exit 0 }
+
+
