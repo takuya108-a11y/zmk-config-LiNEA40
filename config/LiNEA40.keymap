@@ -274,7 +274,7 @@
             timeout-ms = <300>;
             key-positions = <13 14>; // F, Gのキー位置に書き換えてください
             bindings = <&ng_off>;
-            layers = <0 1>; // デフォルトレイヤーが0、薙刀式レイヤーが1の前提
+            layers = <0 2>; // デフォルトレイヤーが0、薙刀式レイヤーが1の前提
         };
 
         //naginata {
