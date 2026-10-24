@@ -295,10 +295,10 @@
 
         naginata {
             bindings = <
-&ng Q      &ng W   &ng E   &ng R   &ng T                              &ng Y             &ng U  &ng I      &ng O     &ng P
-&ng A      &ng S   &ng D   &ng F   &ng G                              &ng H             &ng J  &ng K      &ng L     &ng SEMI
-&ng Z      &ng X   &ng C   &ng V   &ng B                              &ng N             &ng M  &ng COMMA  &ng DOT   &ng SLASH
-&kp LSHFT  &trans  &trans  &trans  &kp ENTER  &kp SPACE    &kp SPACE  &kp INT_MUHENKAN  &trans     &kp BSPC  &kp RSHFT
+&ng Q      &ng W   &ng E   &ng R   &ng T                              &ng Y           &ng U  &ng I      &ng O     &ng P
+&ng A      &ng S   &ng D   &ng F   &ng G                              &ng H           &ng J  &ng K      &ng L     &ng SEMI
+&ng Z      &ng X   &ng C   &ng V   &ng B                              &ng N           &ng M  &ng COMMA  &ng DOT   &ng SLASH
+&kp LSHFT  &trans  &trans  &trans  &kp ENTER  &kp SPACE    &kp SPACE  &kp INT_HENKAN  &trans     &kp BSPC  &kp RSHFT
             >;
         };
 
