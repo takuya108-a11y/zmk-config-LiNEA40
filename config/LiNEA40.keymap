@@ -264,18 +264,6 @@
             bindings = <&mkp MB4>;
             key-positions = <5 6>;
         };
-        combo_ng_on {
-            timeout-ms = <300>;
-            key-positions = <15 16>; // H, Jのキー位置に書き換えてください
-            bindings = <&ng_on>;
-            layers = <0>; // デフォルトレイヤーが0の前提
-        };
-        combo_ng_off {
-            timeout-ms = <300>;
-            key-positions = <13 14>; // F, Gのキー位置に書き換えてください
-            bindings = <&ng_off>;
-            layers = <0 2>; // デフォルトレイヤーが0、薙刀式レイヤーが1の前提
-        };
 
         //naginata {
           //  bindings = <&tog 2>;
