@@ -189,6 +189,7 @@ Write-Host '=== Build results ===' -ForegroundColor Cyan
 $Results | Format-Table -AutoSize
 Write-Host "Total time: $(Format-Elapsed $TotalTimer.Elapsed.TotalSeconds)"
 Write-Host "Output folder: $FirmwareDir"
+Read-Host "続行するには Enter キーを押してください..."
 if ($AnyFailed) { exit 1 } else { exit 0 }
 
 
