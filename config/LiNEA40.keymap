@@ -238,7 +238,7 @@
             key-positions = <8 9>;
         };
 
-        nigasu {
+        nigasudesu {
             bindings = <&kp ESCAPE>;
             key-positions = <0 1>;
         };
