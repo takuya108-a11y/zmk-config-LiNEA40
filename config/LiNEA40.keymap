@@ -14,7 +14,7 @@
 #define CURSOR 3
 #define FUNCTION 4
 #define SCROLL 5
-#define WIRELESS 6
+#define WIRELESS 6　
 
 // OS設定を日本語キーボードのまま使用するための変換定義
 
