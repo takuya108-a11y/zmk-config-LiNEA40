@@ -129,7 +129,7 @@
         kaijo: kaijo {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LS(N) &kp E &kp W &kp W &kp E &kp S &kp T &kp N1 &kp N0 &kp N8 &kp ENTER>;
+            bindings = <&none &kp LS(N) &kp E &kp W &kp W &kp E &kp S &kp T &kp N1 &kp N0 &kp N0 &kp N8 &kp ENTER>;
             label = "kaijo";
         };
 
