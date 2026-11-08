@@ -281,7 +281,7 @@
             bindings = <
 &mt ESCAPE Q           &kp L         &kp U               &kp COMMA     &kp DOT                                         &kp F             &kp W  &kp R                &kp Y            &kp P
 &kp E                  &kp I         &kp A               &kp O         &kp MINUS                                       &kp K             &kp T  &kp N                &kp S            &lt 5 H
-&b_shift LEFT_SHIFT Z  &kp X         &kp C               &kp V         &kp BACKSPACE                                   &kp G             &kp D  &kp M                &kp J            &b_shift RIGHT_SHIFT B
+&b_shift LEFT_SHIFT Z  &kp X         &kp C               &kp V         &xn                                             &kp G             &kp D  &kp M                &kp J            &b_shift RIGHT_SHIFT B
 &mt LCTRL TAB          &kp LEFT_WIN  &mt LEFT_ALT GRAVE  &kp LEFT_ALT  &lt 4 INT_MUHENKAN  &lt 3 SPACE    &lt 3 ENTER  &lt 4 INT_HENKAN         &lt 6 JP_UNDERSCORE  &kp LA(LC(DEL))  &kp DEL
             >;
 
